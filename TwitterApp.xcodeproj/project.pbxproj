@@ -16,6 +16,9 @@
 		2380569A1BA4198F00DA2331 /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238056991BA4198F00DA2331 /* TimeLineTableViewController.swift */; };
 		238056A01BA4306900DA2331 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 2380569F1BA4306900DA2331 /* placeholder.png */; };
 		5B4E439665C7AC4CBDFAEDBA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7146AC062DA4B18CA9E4AE7A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E2EBC9DC1BA6C7F800CAB03B /* TimeLineUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBC9DB1BA6C7F800CAB03B /* TimeLineUser.swift */; };
+		E2EBC9DE1BA6C83900CAB03B /* AccountDataLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBC9DD1BA6C83900CAB03B /* AccountDataLogic.swift */; };
+		E2EBC9E01BA6C9B400CAB03B /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EBC9DF1BA6C9B400CAB03B /* TimeLineTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		7146AC062DA4B18CA9E4AE7A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06803B1AFCEC2E78DAB8399 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CB48C38B600CD4B6F2D81FEA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E2EBC9DB1BA6C7F800CAB03B /* TimeLineUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineUser.swift; sourceTree = "<group>"; };
+		E2EBC9DD1BA6C83900CAB03B /* AccountDataLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDataLogic.swift; sourceTree = "<group>"; };
+		E2EBC9DF1BA6C9B400CAB03B /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				238056791BA4146400DA2331 /* AppDelegate.swift */,
-				238056991BA4198F00DA2331 /* TimeLineTableViewController.swift */,
 				2380567B1BA4146400DA2331 /* ViewController.swift */,
+				E2EBC9DF1BA6C9B400CAB03B /* TimeLineTableViewCell.swift */,
+				238056991BA4198F00DA2331 /* TimeLineTableViewController.swift */,
+				E2EBC9DD1BA6C83900CAB03B /* AccountDataLogic.swift */,
+				E2EBC9DB1BA6C7F800CAB03B /* TimeLineUser.swift */,
 				2380567D1BA4146400DA2331 /* Main.storyboard */,
 				238056801BA4146400DA2331 /* Images.xcassets */,
 				238056821BA4146400DA2331 /* LaunchScreen.xib */,
@@ -199,6 +208,7 @@
 		2380566C1BA4146400DA2331 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = yokoyama;
 				TargetAttributes = {
@@ -306,7 +316,10 @@
 			files = (
 				2380567C1BA4146400DA2331 /* ViewController.swift in Sources */,
 				2380567A1BA4146400DA2331 /* AppDelegate.swift in Sources */,
+				E2EBC9E01BA6C9B400CAB03B /* TimeLineTableViewCell.swift in Sources */,
 				2380569A1BA4198F00DA2331 /* TimeLineTableViewController.swift in Sources */,
+				E2EBC9DE1BA6C83900CAB03B /* AccountDataLogic.swift in Sources */,
+				E2EBC9DC1BA6C7F800CAB03B /* TimeLineUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

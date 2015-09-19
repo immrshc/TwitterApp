@@ -2,29 +2,45 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pq6-mh-Ldh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--タイムライン一覧-->
         <scene sceneID="eHX-BY-3cm">
             <objects>
                 <tableViewController id="tba-sS-WBA" customClass="TimeLineTableViewController" customModule="TwitterApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aBl-Ri-ztS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="aBl-Ri-ztS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Irj-Ht-OQH" style="IBUITableViewCellStyleDefault" id="KKG-WU-VbS">
+                            <tableViewCell contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="73" id="KKG-WU-VbS">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KKG-WU-VbS" id="WTF-v4-7W1">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Irj-Ht-OQH">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LA0-uD-VvD">
+                                            <rect key="frame" x="8" y="2" width="67" height="68"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="LA0-uD-VvD" secondAttribute="height" multiplier="67:68" id="Kdl-Ww-RFB"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOk-5D-BHZ">
+                                            <rect key="frame" x="83" y="2" width="229" height="68"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LA0-uD-VvD" firstAttribute="leading" secondItem="WTF-v4-7W1" secondAttribute="leading" constant="8" id="5rL-qw-lFz"/>
+                                        <constraint firstItem="LA0-uD-VvD" firstAttribute="top" secondItem="WTF-v4-7W1" secondAttribute="top" constant="2" id="CBj-MV-7I4"/>
+                                        <constraint firstAttribute="bottom" secondItem="iOk-5D-BHZ" secondAttribute="bottom" constant="2" id="Jm5-BI-0In"/>
+                                        <constraint firstAttribute="trailing" secondItem="iOk-5D-BHZ" secondAttribute="trailing" constant="8" id="RTM-aq-jlx"/>
+                                        <constraint firstAttribute="bottom" secondItem="LA0-uD-VvD" secondAttribute="bottom" constant="2" id="ghL-2i-Orv"/>
+                                        <constraint firstItem="iOk-5D-BHZ" firstAttribute="leading" secondItem="LA0-uD-VvD" secondAttribute="trailing" constant="8" id="jNN-3e-tS1"/>
+                                        <constraint firstItem="iOk-5D-BHZ" firstAttribute="top" secondItem="WTF-v4-7W1" secondAttribute="top" constant="2" id="tVv-tw-hNH"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="z6J-J8-MXm"/>
@@ -39,7 +55,7 @@
                     <navigationItem key="navigationItem" title="タイムライン一覧" id="inp-9D-w0U">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vDN-q3-bTv">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Vor-dF-gJe"/>
+                                <action selector="tapTweetButton:" destination="tba-sS-WBA" id="Hao-6B-HWq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -86,7 +102,4 @@
             <point key="canvasLocation" x="318" y="307"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="z6J-J8-MXm"/>
-    </inferredMetricsTieBreakers>
 </document>
